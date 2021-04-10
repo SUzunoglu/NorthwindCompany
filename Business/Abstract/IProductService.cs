@@ -10,3 +10,4 @@ namespace Business.Abstract
         List<Product> GetAll();
     }
 }
+ 
