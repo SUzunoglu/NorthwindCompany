@@ -20,6 +20,8 @@ namespace DataAccess.Concrete.EntityFramework
                 var result = from p in context.Products
                              join c in context.Categories
                              on p.CategoryId equals c.CategoryId
+                             where p.UnitPrice>50
+                             orderby p.UnitPrice descending
                              select new ProductDetailDto 
                              { 
                                  ProductId = p.ProductId, ProductName = p.ProductName, 
